@@ -24,12 +24,16 @@ function createHeart() {
 
 setInterval(createHeart, 300);
 
+// ❤️ Love Timer
+const startDate = new Date("June 22, 2026 00:00:00");
+
 function updateTimer() {
     const now = new Date();
     const diff = now - startDate;
 
     if (diff < 0) {
-        document.getElementById("timer").innerHTML = "Our love story hasn't started yet ❤️";
+        document.getElementById("timer").innerHTML =
+            "Starts on June 22, 2026 ❤️";
         return;
     }
 
@@ -38,16 +42,17 @@ function updateTimer() {
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
 
-    document.getElementById("timer").innerHTML =
-        `${days} Days ❤️<br>
-         ${hours} Hours ❤️<br>
-         ${minutes} Minutes ❤️<br>
-         ${seconds} Seconds ❤️`;
+    document.getElementById("timer").innerHTML = `
+        ❤️ Since: June 22, 2026 <br><br>
+        ${days} Days ❤️<br>
+        ${hours} Hours ❤️<br>
+        ${minutes} Minutes ❤️<br>
+        ${seconds} Seconds ❤️
+    `;
 }
 
 updateTimer();
 setInterval(updateTimer, 1000);
-
 // ❤️ Final Button
 document.getElementById("love").onclick = function () {
   alert("Happy 1st Monthsary, Bebu! ❤️\n\nI Love You Forever! 💖");
