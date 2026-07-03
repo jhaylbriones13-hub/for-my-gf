@@ -64,3 +64,10 @@ const musicBtn = document.getElementById("musicBtn");
 musicBtn.onclick = function () {
     music.play();
 };
+
+// Messenger browser detection
+const ua = navigator.userAgent;
+
+if (ua.includes("FBAN") || ua.includes("FBAV") || ua.includes("Messenger")) {
+    document.getElementById("browserNotice").style.display = "block";
+}
