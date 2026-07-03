@@ -55,5 +55,12 @@ updateTimer();
 setInterval(updateTimer, 1000);
 // ❤️ Final Button
 document.getElementById("love").onclick = function () {
-  alert("Happy 1st Monthsary, Bebu! ❤️\n\nI Love You Forever! 💖");
+    alert("Happy 1st Monthsary, Bebu! ❤️\n\nI Love You Forever! 💖");
+};
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+musicBtn.onclick = function () {
+    music.play();
 };
